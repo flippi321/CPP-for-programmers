@@ -9,12 +9,26 @@ int main()
     cout << "Creating empty double vector" << endl;
     vector<double> list;
 
-    cout << "Using front() on vector: " << list.front() << endl;
-    cout << "Using back() on vector: " << list.back() << endl;
+    if (list.empty()) {
+        cout << "front() would result in undefined behavior because vector is empty." << endl;
+    } else {
+        cout << "Using front() on vector: " << list.front() << endl;
+    }
+
+    if (list.empty()) {
+        cout << "back() would result in undefined behavior because vector is empty." << endl;
+    } else {
+        cout << "Using back() on vector: " << list.back() << endl;
+    }
 
     cout << "Using emplace() to add 2.0 to vector: " << endl;
     list.emplace(list.begin(), 2.0);
-    cout << "Using front() on vector: " << list.front() << endl;
+
+    if (list.empty()) {
+        cout << "front() would result in undefined behavior because vector is empty." << endl;
+    } else {
+        cout << "Using front() on vector: " << list.front() << endl;
+    }
 
     // Check values 0, 1, 2
     for(int i = 0; i < 3; i++){
