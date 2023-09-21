@@ -50,6 +50,7 @@ public:
     }
 };
 
+// Main function, unchanged from example code
 int main() {
     auto app = Gtk::Application::create();
     Window window;
