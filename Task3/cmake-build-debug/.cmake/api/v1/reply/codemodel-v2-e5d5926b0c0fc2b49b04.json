@@ -16,7 +16,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -28,11 +29,12 @@
 					[
 						0
 					],
-					"name" : "Task1",
+					"name" : "Task3",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -40,16 +42,23 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Task1a::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Task1a-Debug-761c0086756e552b2cde.json",
-					"name" : "Task1a",
+					"id" : "Task3.2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task3.2-Debug-229332d97d7f4b5e40f3.json",
+					"name" : "Task3.2",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "Task1b::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Task1b-Debug-ce44edc0907430e55c03.json",
-					"name" : "Task1b",
+					"id" : "Task3.3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task3.3-Debug-bf90dbecb7069f3b2c36.json",
+					"name" : "Task3.3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Task3.4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task3.4-Debug-37f7172bd0cc9f8ffa50.json",
+					"name" : "Task3.4",
 					"projectIndex" : 0
 				}
 			]
@@ -58,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task1/cmake-build-debug",
-		"source" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task1"
+		"build" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task3/cmake-build-debug",
+		"source" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task3"
 	},
 	"version" : 
 	{
