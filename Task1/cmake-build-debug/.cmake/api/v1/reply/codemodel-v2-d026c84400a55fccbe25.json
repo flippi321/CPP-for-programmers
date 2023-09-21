@@ -12,7 +12,12 @@
 						"string" : "3.26"
 					},
 					"projectIndex" : 0,
-					"source" : "."
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -23,10 +28,31 @@
 					[
 						0
 					],
-					"name" : "Task1"
+					"name" : "Task1",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
 				}
 			],
-			"targets" : []
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Task1a::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task1a-Debug-761c0086756e552b2cde.json",
+					"name" : "Task1a",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Task1b::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task1b-Debug-335270b765d83595a4f5.json",
+					"name" : "Task1b",
+					"projectIndex" : 0
+				}
+			]
 		}
 	],
 	"kind" : "codemodel",

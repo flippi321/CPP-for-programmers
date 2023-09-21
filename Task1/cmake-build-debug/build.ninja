@@ -40,6 +40,68 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/Task1/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target Task1a
+
+
+#############################################
+# Order-only phony target for Task1a
+
+build cmake_object_order_depends_target_Task1a: phony || CMakeFiles/Task1a.dir
+
+build CMakeFiles/Task1a.dir/src/1a.cpp.o: CXX_COMPILER__Task1a_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/Task1/src/1a.cpp || cmake_object_order_depends_target_Task1a
+  DEP_FILE = CMakeFiles/Task1a.dir/src/1a.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Task1a.dir
+  OBJECT_FILE_DIR = CMakeFiles/Task1a.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task1a
+
+
+#############################################
+# Link the executable Task1a
+
+build Task1a: CXX_EXECUTABLE_LINKER__Task1a_Debug CMakeFiles/Task1a.dir/src/1a.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/Task1a.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Task1a
+  TARGET_PDB = Task1a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Task1b
+
+
+#############################################
+# Order-only phony target for Task1b
+
+build cmake_object_order_depends_target_Task1b: phony || CMakeFiles/Task1b.dir
+
+build CMakeFiles/Task1b.dir/src/1b.cpp.o: CXX_COMPILER__Task1b_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/Task1/src/1b.cpp || cmake_object_order_depends_target_Task1b
+  DEP_FILE = CMakeFiles/Task1b.dir/src/1b.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Task1b.dir
+  OBJECT_FILE_DIR = CMakeFiles/Task1b.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task1b
+
+
+#############################################
+# Link the executable Task1b
+
+build Task1b: CXX_EXECUTABLE_LINKER__Task1b_Debug CMakeFiles/Task1b.dir/src/1b.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/Task1b.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Task1b
+  TARGET_PDB = Task1b.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -74,7 +136,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task1/cmake-build-debug
 
-build all: phony
+build all: phony Task1a Task1b
 
 # =============================================================================
 # Built-in targets
