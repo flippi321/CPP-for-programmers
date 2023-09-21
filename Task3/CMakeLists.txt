@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.26)
-project(Task1)
+project(Task3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Task1a src/1a.cpp)
-add_executable(Task1b src/1b.cpp src/temperatures.txt)
+add_executable(Task3.1 src/3.1.cpp)
+add_executable(Task3.2 src/3.2.cpp src/circle.hpp)
+add_executable(Task3.3 src/3.3.cpp src/commodity.hpp)
+add_executable(Task3.4 src/3.3.cpp)
