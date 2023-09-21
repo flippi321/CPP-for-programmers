@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Creating empty double vector" << endl;
+    cout << "Creating empty double vector" << endl << endl;
     vector<double> list;
 
     if (list.empty()) {
@@ -16,22 +16,24 @@ int main()
     }
 
     if (list.empty()) {
-        cout << "back() would result in undefined behavior because vector is empty." << endl;
+        cout << "back() would result in undefined behavior because vector is empty." << endl << endl;
     } else {
-        cout << "Using back() on vector: " << list.back() << endl;
+        cout << "Using back() on vector: " << list.back() << endl << endl;
     }
 
-    cout << "Using emplace() to add 2.0 to vector: " << endl;
+    cout << "Using emplace() to add 2.0 to vector: " << endl << endl;
     list.emplace(list.begin(), 2.0);
 
     if (list.empty()) {
-        cout << "front() would result in undefined behavior because vector is empty." << endl;
+        cout << "front() would result in undefined behavior because vector is empty." << endl << endl;
     } else {
-        cout << "Using front() on vector: " << list.front() << endl;
+        cout << "Using front() on vector: " << list.front() << endl << endl;
     }
 
-    // Check values 0, 1, 2
-    for(int i = 0; i < 3; i++){
+    cout << "Checking values in list: " << endl;
+
+    // Check values 0, 1, 2, 3
+    for(int i = 0; i < 4; i++){
         // If the vector contains i
         if(find(list.begin(), list.end(), double(i)) != list.end()){
             cout << "The value " << double(i) << " is in the list" << endl;
