@@ -2,31 +2,43 @@
 
 class Window : public Gtk::Window {
 public:
+    bool validInputs;
     Gtk::Box box;
-    Gtk::Entry entry;
+    Gtk::Entry firstName;
+    Gtk::Entry lastName;
     Gtk::Button button;
     Gtk::Label label;
 
     Window() : box(Gtk::Orientation::ORIENTATION_VERTICAL) {
-        button.set_label("Click here");
+        button.set_label("Combine names");
 
-        box.pack_start(entry);  // Add the widget entry to box
+        box.pack_start(firstName);  // Add the widget entry to box
+        box.pack_start(lastName);  // Add the widget entry to box
         box.pack_start(button); // Add the widget button to box
         box.pack_start(label);  // Add the widget label to box
 
         add(box);   // Add vbox to window
         show_all(); // Show all widgets
 
-        entry.signal_changed().connect([this]() {
-            label.set_text("Entry now contains: " + entry.get_text());
+        // If the first name is changed, we check if inputs are valid
+        firstName.signal_changed().connect([this]() {
+            validInputs = (!firstName.get_text().empty() && !lastName.get_text().empty());
+            if(validInputs){
+                button.set_label("True");
+            }
         });
 
-        entry.signal_activate().connect([this]() {
-            label.set_text("Entry activated");
+        // If the last name is changed, we check if inputs are valid
+        lastName.signal_changed().connect([this]() {
+            validInputs = (!firstName.get_text().empty() && !lastName.get_text().empty());
+            if(validInputs){
+                button.set_label("True");
+            }
         });
 
         button.signal_clicked().connect([this]() {
-            label.set_text("Button clicked");
+            Glib::ustring labelText = firstName.get_text() + " " + lastName.get_text();
+            label.set_text(labelText);
         });
     }
 };
