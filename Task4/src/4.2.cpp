@@ -4,18 +4,26 @@ class Window : public Gtk::Window {
 public:
     bool validInputs;
     Gtk::Box box;
+    Gtk::Label firstNameTitle;
     Gtk::Entry firstName;
+    Gtk::Label lastNameTitle;
     Gtk::Entry lastName;
     Gtk::Button button;
     Gtk::Label label;
 
     Window() : box(Gtk::Orientation::ORIENTATION_VERTICAL) {
+        // Define labels
         button.set_label("Combine names");
+        firstNameTitle.set_text("Your First name:");
+        lastNameTitle.set_text("Your Last name:");
 
-        box.pack_start(firstName);  // Add the widget entry to box
-        box.pack_start(lastName);  // Add the widget entry to box
-        box.pack_start(button); // Add the widget button to box
-        box.pack_start(label);  // Add the widget label to box
+        // Add everything to the box
+        box.pack_start(firstNameTitle);
+        box.pack_start(firstName);
+        box.pack_start(lastNameTitle);
+        box.pack_start(lastName);
+        box.pack_start(button);
+        box.pack_start(label);
 
         add(box);   // Add vbox to window
         show_all(); // Show all widgets
@@ -36,7 +44,7 @@ public:
         // If button is clicked we combine the first and last name
         // Will only work if button is active (sensitive)
         button.signal_clicked().connect([this]() {
-            Glib::ustring labelText = firstName.get_text() + " " + lastName.get_text();
+            Glib::ustring labelText = "Hi " + firstName.get_text() + " " + lastName.get_text() + "!";
             label.set_text(labelText);
         });
     }
