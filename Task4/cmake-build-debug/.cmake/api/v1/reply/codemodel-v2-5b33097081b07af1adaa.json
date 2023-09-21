@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "Task4",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Task4.1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Task4.1-Debug-4022e87e4e756cd7a844.json",
+					"jsonFile" : "target-Task4.1-Debug-1377d5c6ff0cc9854845.json",
 					"name" : "Task4.1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Task4.2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task4.2-Debug-601bd921b39806ea83df.json",
+					"name" : "Task4.2",
 					"projectIndex" : 0
 				}
 			]

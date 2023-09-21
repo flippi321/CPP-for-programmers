@@ -55,12 +55,6 @@ build CMakeFiles/Task4.1.dir/src/4.1.cpp.o: CXX_COMPILER__Task4.2e1_unscanned_De
   OBJECT_DIR = CMakeFiles/Task4.1.dir
   OBJECT_FILE_DIR = CMakeFiles/Task4.1.dir/src
 
-build CMakeFiles/Task4.1.dir/src/4.2.cpp.o: CXX_COMPILER__Task4.2e1_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/Task4/src/4.2.cpp || cmake_object_order_depends_target_Task4.1
-  DEP_FILE = CMakeFiles/Task4.1.dir/src/4.2.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Task4.1.dir
-  OBJECT_FILE_DIR = CMakeFiles/Task4.1.dir/src
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Task4.1
@@ -69,13 +63,44 @@ build CMakeFiles/Task4.1.dir/src/4.2.cpp.o: CXX_COMPILER__Task4.2e1_unscanned_De
 #############################################
 # Link the executable Task4.1
 
-build Task4.1: CXX_EXECUTABLE_LINKER__Task4.2e1_Debug CMakeFiles/Task4.1.dir/src/4.1.cpp.o CMakeFiles/Task4.1.dir/src/4.2.cpp.o
+build Task4.1: CXX_EXECUTABLE_LINKER__Task4.2e1_Debug CMakeFiles/Task4.1.dir/src/4.1.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Task4.1.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = Task4.1
   TARGET_PDB = Task4.1.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Task4.2
+
+
+#############################################
+# Order-only phony target for Task4.2
+
+build cmake_object_order_depends_target_Task4.2: phony || CMakeFiles/Task4.2.dir
+
+build CMakeFiles/Task4.2.dir/src/4.2.cpp.o: CXX_COMPILER__Task4.2e2_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/Task4/src/4.2.cpp || cmake_object_order_depends_target_Task4.2
+  DEP_FILE = CMakeFiles/Task4.2.dir/src/4.2.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Task4.2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Task4.2.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task4.2
+
+
+#############################################
+# Link the executable Task4.2
+
+build Task4.2: CXX_EXECUTABLE_LINKER__Task4.2e2_Debug CMakeFiles/Task4.2.dir/src/4.2.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/Task4.2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Task4.2
+  TARGET_PDB = Task4.2.dbg
 
 
 #############################################
@@ -111,7 +136,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task4/cmake-build-debug
 
-build all: phony Task4.1
+build all: phony Task4.1 Task4.2
 
 # =============================================================================
 # Built-in targets
