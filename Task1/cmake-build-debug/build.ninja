@@ -40,37 +40,6 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/Task1/cmake-build-debug/
-# =============================================================================
-# Object build statements for EXECUTABLE target Task1
-
-
-#############################################
-# Order-only phony target for Task1
-
-build cmake_object_order_depends_target_Task1: phony || CMakeFiles/Task1.dir
-
-build CMakeFiles/Task1.dir/main.cpp.o: CXX_COMPILER__Task1_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/Task1/main.cpp || cmake_object_order_depends_target_Task1
-  DEP_FILE = CMakeFiles/Task1.dir/main.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Task1.dir
-  OBJECT_FILE_DIR = CMakeFiles/Task1.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Task1
-
-
-#############################################
-# Link the executable Task1
-
-build Task1: CXX_EXECUTABLE_LINKER__Task1_Debug CMakeFiles/Task1.dir/main.cpp.o
-  FLAGS = -g
-  OBJECT_DIR = CMakeFiles/Task1.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = Task1
-  TARGET_PDB = Task1.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -105,7 +74,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task1/cmake-build-debug
 
-build all: phony Task1
+build all: phony
 
 # =============================================================================
 # Built-in targets
