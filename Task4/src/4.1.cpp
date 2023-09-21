@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Creating empty vector" << endl;
+    cout << "Creating empty double vector" << endl;
     vector<double> list;
 
     cout << "Using front() on vector: " << list.front() << endl;
