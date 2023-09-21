@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits>
 
-int main(int argc, char* argv[])
+int main()
 {
     constexpr int length = 5;
     int bTen = 0;
