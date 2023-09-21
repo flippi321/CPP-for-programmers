@@ -1,0 +1,5 @@
+/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task3/cmake-build-debug/CMakeFiles/Task3.2.dir
+/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task3/cmake-build-debug/CMakeFiles/Task3.3.dir
+/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task3/cmake-build-debug/CMakeFiles/Task3.4.dir
+/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
