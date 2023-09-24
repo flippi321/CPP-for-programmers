@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Task5",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Task5a::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task5a-Debug-c8331b62a130af4c35e7.json",
+					"name" : "Task5a",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Task5b::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task5b-Debug-6327a74388d2e0b48149.json",
+					"name" : "Task5b",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task 5/cmake-build-debug",
+		"source" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/Task 5"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
