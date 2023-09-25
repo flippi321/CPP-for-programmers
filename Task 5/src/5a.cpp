@@ -31,11 +31,37 @@ public:
     };
 
     class King : public Piece {
-        // missing implementations
+    public:
+        King(Color color) : Piece(color) {}
+
+        std::string type() const override {
+            return color_string() + " king";
+        }
+
+        bool valid_move(int from_x, int from_y, int to_x, int to_y) const override {
+            int dx = abs(to_x - from_x);
+            int dy = abs(to_y - from_y);
+
+            // Check if the move is within one square in any direction
+            return (dx <= 1 && dy <= 1);
+        }
     };
 
     class Knight : public Piece {
-        // missing implementations
+    public:
+        Knight(Color color) : Piece(color) {}
+
+        std::string type() const override {
+            return color_string() + " knight";
+        }
+
+        bool valid_move(int from_x, int from_y, int to_x, int to_y) const override {
+            int dx = abs(to_x - from_x);
+            int dy = abs(to_y - from_y);
+
+            // Check if the move is an L-shape: two squares in one direction and one square in the other
+            return (dx == 2 && dy == 1) || (dx == 1 && dy == 2);
+        }
     };
 
     ChessBoard() {
