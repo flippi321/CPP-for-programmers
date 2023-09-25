@@ -26,16 +26,54 @@ public:
         /// Return color and type of the chess piece
         virtual std::string type() const = 0;
 
+        /// Returns the letter representation of this piece
+        virtual string type_short() const = 0;
+
         /// Returns true if the given chess piece move is valid
         virtual bool valid_move(int from_x, int from_y, int to_x, int to_y) const = 0;
     };
 
     class King : public Piece {
-        // missing implementations
+    public:
+        King(Color color) : Piece(color) {}
+
+        std::string type() const override {
+            return color_string() + " king";
+        }
+
+        std::string type_short() const override {
+            return "K";
+        }
+
+        bool valid_move(int from_x, int from_y, int to_x, int to_y) const override {
+            int dx = abs(to_x - from_x);
+            int dy = abs(to_y - from_y);
+
+            // Check if the move is within one square in any direction
+            return (dx <= 1 && dy <= 1);
+        }
     };
 
     class Knight : public Piece {
-        // missing implementations
+    public:
+        Knight(Color color) : Piece(color) {}
+
+        std::string type() const override {
+            return color_string() + " knight";
+        }
+
+        std::string type_short() const override {
+            return "N";
+        }
+
+
+        bool valid_move(int from_x, int from_y, int to_x, int to_y) const override {
+            int dx = abs(to_x - from_x);
+            int dy = abs(to_y - from_y);
+
+            // Check if the move is an L-shape: two squares in one direction and one square in the other
+            return (dx == 2 && dy == 1) || (dx == 1 && dy == 2);
+        }
     };
 
     ChessBoard() {
@@ -48,6 +86,32 @@ public:
     /// 8x8 squares occupied by 1 or 0 chess pieces
     vector<vector<unique_ptr<Piece>>> squares;
 
+    string get_board(){
+        string board = "Board: \n";
+        for (int i = 0; i < squares.size(); i++){
+            for (int j = 0; j < squares[i].size(); j++){
+                // THe leftmost side needs one more "_"
+                if (j == 0){
+                    board += "|_";
+                } else {
+                    board += "_|_";
+                }
+                if(auto piece = dynamic_cast<Piece *>(squares[i][j].get())){
+                    board += piece->type_short();
+                } else {
+                    board += "_";
+                }
+
+                if (j == (squares[i].size()-1)){
+                    board += "_|";
+                }
+            }
+            board += "\n";
+        }
+        // Add bottom pillars
+
+        return board;
+    }
     /// Move a chess piece if it is a valid move.
     /// Does not test for check or checkmate.
     bool move_piece(const std::string &from, const std::string &to) {
@@ -59,7 +123,8 @@ public:
         auto &piece_from = squares[from_x][from_y];
         if (piece_from) {
             if (piece_from->valid_move(from_x, from_y, to_x, to_y)) {
-                cout << piece_from->type() << " is moving from " << from << " to " << to << endl;
+                //cout << piece_from->type() << " is moving from " << from << " to " << to << endl;
+                cout << get_board() << endl;
                 auto &piece_to = squares[to_x][to_y];
                 if (piece_to) {
                     if (piece_from->color != piece_to->color) {
