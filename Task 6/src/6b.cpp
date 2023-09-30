@@ -44,7 +44,7 @@ private:
           send_response(connection, "200 OK", "text/plain", "Dette er en side");
         } else {
           // Respond with 404 Not Found for all other paths
-          send_response(connection, "404 Not Found", "text/plain", "Not Found");
+          send_response(connection, "404 Not Found", "text/plain", "Try another URL or method");
         }
       }
     });
