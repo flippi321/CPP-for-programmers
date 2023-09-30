@@ -86,32 +86,6 @@ public:
     /// 8x8 squares occupied by 1 or 0 chess pieces
     vector<vector<unique_ptr<Piece>>> squares;
 
-    string get_board(){
-        string board = "Board: \n";
-        for (int i = 0; i < squares.size(); i++){
-            for (int j = 0; j < squares[i].size(); j++){
-                // THe leftmost side needs one more "_"
-                if (j == 0){
-                    board += "|_";
-                } else {
-                    board += "_|_";
-                }
-                if(auto piece = dynamic_cast<Piece *>(squares[i][j].get())){
-                    board += piece->type_short();
-                } else {
-                    board += "_";
-                }
-
-                if (j == (squares[i].size()-1)){
-                    board += "_|";
-                }
-            }
-            board += "\n";
-        }
-        // Add bottom pillars
-
-        return board;
-    }
     /// Move a chess piece if it is a valid move.
     /// Does not test for check or checkmate.
     bool move_piece(const std::string &from, const std::string &to) {
@@ -123,8 +97,6 @@ public:
         auto &piece_from = squares[from_x][from_y];
         if (piece_from) {
             if (piece_from->valid_move(from_x, from_y, to_x, to_y)) {
-                //cout << piece_from->type() << " is moving from " << from << " to " << to << endl;
-                cout << get_board() << endl;
                 auto &piece_to = squares[to_x][to_y];
                 if (piece_to) {
                     if (piece_from->color != piece_to->color) {
@@ -138,6 +110,7 @@ public:
                     }
                 }
                 piece_to = move(piece_from);
+                after_piece_move();
                 return true;
             } else {
                 cout << "can not move " << piece_from->type() << " from " << from << " to " << to << endl;
@@ -147,6 +120,10 @@ public:
             cout << "no piece at " << from << endl;
             return false;
         }
+    }
+
+    void after_piece_move(){
+        //ChessBoardPrint should print when this is called
     }
 };
 
@@ -187,6 +164,7 @@ public:
 
 int main() {
     ChessBoard board;
+    ChessBoardPrint boardPrinter(board); // Pass the chessboard to the boardPrinter
 
     board.squares[4][0] = make_unique<ChessBoard::King>(ChessBoard::Color::WHITE);
     board.squares[1][0] = make_unique<ChessBoard::Knight>(ChessBoard::Color::WHITE);
@@ -202,8 +180,6 @@ int main() {
     board.move_piece("b1", "b2");
     cout << endl;
 
-    ChessBoardPrint boardPrinter(board); // Pass the chessboard to the boardPrinter
-
     cout << "A simulated game:" << endl;
     board.move_piece("e1", "e2");
     board.move_piece("g8", "h6");
@@ -214,5 +190,4 @@ int main() {
     board.move_piece("d5", "f6");
     board.move_piece("h6", "g8");
     board.move_piece("f6", "e8");
-
 }
