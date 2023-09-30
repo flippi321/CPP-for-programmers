@@ -152,42 +152,37 @@ public:
 
 class ChessBoardPrint {
 public:
-    ChessBoard chessBoard;
+    const ChessBoard& chessBoard; // Make a reference to the chessBoard
 
-    // Constructor using a lambda expression to initialize chessBoard
-    ChessBoardPrint(ChessBoard board) : chessBoard([board]() {
-        return board;
-    }()) {
-
-    }
+    // Constructor that takes a reference to the chessBoard
+    ChessBoardPrint(const ChessBoard& board) : chessBoard(board) {}
 
     string get_board(){
-        string board = "Board: \n";
+        string board_str = "Board: \n";
         for (int i = 0; i < chessBoard.squares.size(); i++){
             for (int j = 0; j < chessBoard.squares[i].size(); j++){
                 // THe leftmost side needs one more "_"
                 if (j == 0){
-                    board += "|_";
+                    board_str += "|_";
                 } else {
-                    board += "_|_";
+                    board_str += "_|_";
                 }
-                if(auto piece = dynamic_cast<Piece *>(chessBoard.squares[i][j].get())){
-                    board += piece->type_short();
+                if(auto piece = dynamic_cast<ChessBoard::Piece *>(chessBoard.squares[i][j].get())){
+                    board_str += piece->type_short();
                 } else {
-                    board += "_";
+                    board_str += "_";
                 }
 
                 if (j == (chessBoard.squares[i].size()-1)){
-                    board += "_|";
+                    board_str += "_|";
                 }
             }
-            board += "\n";
+            board_str += "\n";
         }
         // Add bottom pillars
 
-        return board;
+        return board_str;
     }
-
 };
 
 int main() {
@@ -207,6 +202,8 @@ int main() {
     board.move_piece("b1", "b2");
     cout << endl;
 
+    ChessBoardPrint boardPrinter(board); // Pass the chessboard to the boardPrinter
+
     cout << "A simulated game:" << endl;
     board.move_piece("e1", "e2");
     board.move_piece("g8", "h6");
@@ -217,4 +214,5 @@ int main() {
     board.move_piece("d5", "f6");
     board.move_piece("h6", "g8");
     board.move_piece("f6", "e8");
+
 }
