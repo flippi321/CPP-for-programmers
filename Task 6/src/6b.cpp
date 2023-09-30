@@ -1,10 +1,11 @@
 #include <boost/asio.hpp>
 #include <iostream>
+#include <string>
 
 using namespace std;
 using namespace boost::asio::ip;
 
-class EchoServer {
+class WebServer {
 private:
   class Connection {
   public:
@@ -26,30 +27,44 @@ private:
       if (!ec) {
         // Retrieve message from client as string:
         istream read_stream(read_buffer.get());
-        std::string message;
-        getline(read_stream, message);
-        message.pop_back(); // Remove "\r" at the end of message
+        std::string request_line;
+        getline(read_stream, request_line);
 
-        // Close connection when "exit" is retrieved from client
-        if (message == "exit")
-          return;
+        // Extract the HTTP method and path from the request line
+        std::string http_method;
+        std::string path;
+        istringstream request_stream(request_line);
+        request_stream >> http_method >> path;
 
-        cout << "Message from a connected client: " << message << endl;
-
-        auto write_buffer = make_shared<boost::asio::streambuf>();
-        ostream write_stream(write_buffer.get());
-
-        // Add message to be written to client:
-        write_stream << message << "\r\n";
-
-        // Write to client
-        async_write(connection->socket, *write_buffer,
-                    [this, connection, write_buffer](const boost::system::error_code &ec, size_t) {
-          // If not error:
-          if (!ec)
-            handle_request(connection);
-        });
+        if (http_method == "GET" && path == "/") {
+          // Respond to the root path
+          send_response(connection, "200 OK", "text/plain", "Dette er hovedsiden");
+        } else if (http_method == "GET" && path == "/en_side") {
+          // Respond to the /en_side path
+          send_response(connection, "200 OK", "text/plain", "Dette er en side");
+        } else {
+          // Respond with 404 Not Found for all other paths
+          send_response(connection, "404 Not Found", "text/plain", "Not Found");
+        }
       }
+    });
+  }
+
+  void send_response(shared_ptr<Connection> connection, const std::string& status, const std::string& content_type, const std::string& body) {
+    auto response = make_shared<boost::asio::streambuf>();
+    ostream response_stream(response.get());
+
+    response_stream << "HTTP/1.1 " << status << "\r\n";
+    response_stream << "Content-Type: " << content_type << "\r\n";
+    response_stream << "Content-Length: " << body.length() << "\r\n";
+    response_stream << "Connection: close\r\n\r\n";
+    response_stream << body;
+
+    async_write(connection->socket, *response,
+                [this, connection, response](const boost::system::error_code &ec, size_t) {
+      // If not error:
+      if (!ec)
+        handle_request(connection);
     });
   }
 
@@ -69,7 +84,7 @@ private:
   }
 
 public:
-  EchoServer() : endpoint(tcp::v4(), 8080), acceptor(io_service, endpoint) {}
+  WebServer() : endpoint(tcp::v4(), 8080), acceptor(io_service, endpoint) {}
 
   void start() {
     accept();
@@ -79,10 +94,10 @@ public:
 };
 
 int main() {
-  EchoServer echo_server;
+  WebServer web_server;
 
-  cout << "Starting echo server" << endl
-       << "Connect in a terminal with: telnet localhost 8080. Type 'exit' to end connection." << endl;
+  cout << "Starting web server" << endl
+       << "Access in a web browser at http://localhost:8080 or http://localhost:8080/en_side" << endl;
 
-  echo_server.start();
+  web_server.start();
 }
