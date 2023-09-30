@@ -71,6 +71,37 @@ build Task6a: CXX_EXECUTABLE_LINKER__Task6a_Debug CMakeFiles/Task6a.dir/src/6a.c
   TARGET_FILE = Task6a
   TARGET_PDB = Task6a.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Task6b
+
+
+#############################################
+# Order-only phony target for Task6b
+
+build cmake_object_order_depends_target_Task6b: phony || CMakeFiles/Task6b.dir
+
+build CMakeFiles/Task6b.dir/src/6b.cpp.o: CXX_COMPILER__Task6b_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/CPP-for-programmers/Task$ 6/src/6b.cpp || cmake_object_order_depends_target_Task6b
+  DEP_FILE = CMakeFiles/Task6b.dir/src/6b.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Task6b.dir
+  OBJECT_FILE_DIR = CMakeFiles/Task6b.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task6b
+
+
+#############################################
+# Link the executable Task6b
+
+build Task6b: CXX_EXECUTABLE_LINKER__Task6b_Debug CMakeFiles/Task6b.dir/src/6b.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/Task6b.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Task6b
+  TARGET_PDB = Task6b.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -105,7 +136,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 6/cmake-build-debug
 
-build all: phony Task6a
+build all: phony Task6a Task6b
 
 # =============================================================================
 # Built-in targets
