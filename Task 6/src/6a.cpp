@@ -2,6 +2,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <functional>
 
 using namespace std;
 
@@ -122,9 +123,23 @@ public:
         }
     }
 
-    void after_piece_move(){
-        //ChessBoardPrint should print when this is called
+    void after_piece_move() {
+        if (on_after_piece_move) {
+            on_after_piece_move();
+        }
     }
+
+    // Define a function object type for the callback
+    using AfterPieceMoveCallback = function<void()>;
+
+
+    // Set a callback function using this method
+    void set_after_piece_move_callback(const AfterPieceMoveCallback& callback) {
+        on_after_piece_move = callback;
+    }
+
+private:
+    AfterPieceMoveCallback on_after_piece_move;
 };
 
 class ChessBoardPrint {
@@ -165,6 +180,11 @@ public:
 int main() {
     ChessBoard board;
     ChessBoardPrint boardPrinter(board); // Pass the chessboard to the boardPrinter
+
+    // Set the callback for after_piece_move
+    board.set_after_piece_move_callback([&boardPrinter]() {
+        cout << boardPrinter.get_board();
+    });
 
     board.squares[4][0] = make_unique<ChessBoard::King>(ChessBoard::Color::WHITE);
     board.squares[1][0] = make_unique<ChessBoard::Knight>(ChessBoard::Color::WHITE);
