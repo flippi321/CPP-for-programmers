@@ -150,6 +150,46 @@ public:
     }
 };
 
+class ChessBoardPrint {
+public:
+    ChessBoard chessBoard;
+
+    // Constructor using a lambda expression to initialize chessBoard
+    ChessBoardPrint(ChessBoard board) : chessBoard([board]() {
+        return board;
+    }()) {
+
+    }
+
+    string get_board(){
+        string board = "Board: \n";
+        for (int i = 0; i < chessBoard.squares.size(); i++){
+            for (int j = 0; j < chessBoard.squares[i].size(); j++){
+                // THe leftmost side needs one more "_"
+                if (j == 0){
+                    board += "|_";
+                } else {
+                    board += "_|_";
+                }
+                if(auto piece = dynamic_cast<Piece *>(chessBoard.squares[i][j].get())){
+                    board += piece->type_short();
+                } else {
+                    board += "_";
+                }
+
+                if (j == (chessBoard.squares[i].size()-1)){
+                    board += "_|";
+                }
+            }
+            board += "\n";
+        }
+        // Add bottom pillars
+
+        return board;
+    }
+
+};
+
 int main() {
     ChessBoard board;
 
