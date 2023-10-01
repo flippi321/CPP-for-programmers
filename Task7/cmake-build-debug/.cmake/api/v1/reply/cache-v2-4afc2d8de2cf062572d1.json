@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 6/cmake-build-debug"
+			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task7/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 6/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task7/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 6"
+			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task7"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -843,7 +843,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Task6"
+			"value" : "Task7"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1126,7 +1126,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Task6_BINARY_DIR",
+			"name" : "Task7_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1135,10 +1135,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 6/cmake-build-debug"
+			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task7/cmake-build-debug"
 		},
 		{
-			"name" : "Task6_IS_TOP_LEVEL",
+			"name" : "Task7_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1150,7 +1150,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Task6_SOURCE_DIR",
+			"name" : "Task7_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 6"
+			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task7"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
