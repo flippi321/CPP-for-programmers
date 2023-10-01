@@ -50,7 +50,6 @@ Fraction Fraction::operator-(const Fraction &other) const {
 
 Fraction Fraction::operator-(const int &other) const {
     Fraction fraction = *this;
-
     /* Alternative method
      * for(int i = 0; i < other; i++){
      *    --fraction;
@@ -60,6 +59,12 @@ Fraction Fraction::operator-(const int &other) const {
     // Method 2
     fraction.numerator -= fraction.denominator * other;
     return fraction;
+}
+
+Fraction operator-(int integer, const Fraction &other) {
+    // We find the opposite and multiply this by -1
+    Fraction fraction = other - integer;
+    return -fraction;
 }
 
 Fraction &Fraction::operator-=(const Fraction &other) {

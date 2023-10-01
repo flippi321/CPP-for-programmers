@@ -16,10 +16,10 @@ int main() {
   Fraction a(10, 20);
   Fraction b(3, 4);
   Fraction c = a - 5;
-  //Fraction d = b - 5;
+  Fraction d = 5 - b;
 
   print("a = ", a);
   print("b = ", b);
   print("c = ", c);
-  //print("d = ", d);
+  print("d = ", d);
 }
