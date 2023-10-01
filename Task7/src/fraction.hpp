@@ -14,6 +14,7 @@ public:
   Fraction operator+(const Fraction &other) const;
   Fraction operator-(const Fraction &other) const;
   Fraction operator-(const int &other) const;
+  friend Fraction operator-(int integer, const Fraction &other);
   Fraction operator*(const Fraction &other) const;
   Fraction operator/(const Fraction &other) const;
   Fraction operator-() const;
