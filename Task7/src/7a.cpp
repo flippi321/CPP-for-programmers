@@ -15,45 +15,11 @@ void print(const string &text, const Fraction &broek) {
 int main() {
   Fraction a(10, 20);
   Fraction b(3, 4);
-  Fraction c;
-  c.set(5);
-  Fraction d = a / b;
+  Fraction c = a - 5;
+  //Fraction d = b - 5;
 
   print("a = ", a);
   print("b = ", b);
   print("c = ", c);
-  print("d = ", d);
-
-  b += a;
-  ++c;
-  d *= d;
-
-  print("b = ", b);
-  print("c = ", c);
-  print("d = ", d);
-
-  c = a + b - d * a;
-  c = -c;
-
-  print("c = ", c);
-
-  if (a + b != c + d)
-    cout << "a + b != c + d" << endl;
-  else
-    cout << " a + b == c + d" << endl;
-  while (b > a)
-    b -= a;
-  print("b = ", b);
+  //print("d = ", d);
 }
-
-// Utskrift:
-// a = 1 / 2
-// b = 3 / 4
-// c = 5 / 1
-// d = 2 / 3
-// b = 5 / 4
-// c = 6 / 1
-// d = 4 / 9
-// c = -55 / 36
-// a + b != c + d
-// b = 1 / 4
