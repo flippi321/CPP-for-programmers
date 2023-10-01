@@ -48,6 +48,20 @@ Fraction Fraction::operator-(const Fraction &other) const {
     return fraction;
 }
 
+Fraction Fraction::operator-(const int &other) const {
+    Fraction fraction = *this;
+
+    /* Alternative method
+     * for(int i = 0; i < other; i++){
+     *    --fraction;
+     * }
+     */
+
+    // Method 2
+    fraction.numerator -= fraction.denominator * other;
+    return fraction;
+}
+
 Fraction &Fraction::operator-=(const Fraction &other) {
     set(numerator * other.denominator - denominator * other.numerator,
         denominator * other.denominator);
