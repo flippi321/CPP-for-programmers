@@ -71,6 +71,37 @@ build Task7.1: CXX_EXECUTABLE_LINKER__Task7.2e1_Debug CMakeFiles/Task7.1.dir/src
   TARGET_FILE = Task7.1
   TARGET_PDB = Task7.1.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Task7.2
+
+
+#############################################
+# Order-only phony target for Task7.2
+
+build cmake_object_order_depends_target_Task7.2: phony || CMakeFiles/Task7.2.dir
+
+build CMakeFiles/Task7.2.dir/src/7.2.cpp.o: CXX_COMPILER__Task7.2e2_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/CPP-for-programmers/Task$ 7/src/7.2.cpp || cmake_object_order_depends_target_Task7.2
+  DEP_FILE = CMakeFiles/Task7.2.dir/src/7.2.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Task7.2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Task7.2.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task7.2
+
+
+#############################################
+# Link the executable Task7.2
+
+build Task7.2: CXX_EXECUTABLE_LINKER__Task7.2e2_Debug CMakeFiles/Task7.2.dir/src/7.2.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/Task7.2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Task7.2
+  TARGET_PDB = Task7.2.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -105,7 +136,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 7/cmake-build-debug
 
-build all: phony Task7.1
+build all: phony Task7.1 Task7.2
 
 # =============================================================================
 # Built-in targets
