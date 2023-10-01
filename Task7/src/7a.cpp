@@ -2,6 +2,7 @@
 // fraction/main.cpp
 //
 #include "fraction.hpp"
+#include "fractionOperations.hpp"
 #include <iostream>
 #include <string>
 
