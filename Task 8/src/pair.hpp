@@ -10,16 +10,19 @@ public:
 
     Pair(const T1& value1, const T2& value2) : first(value1), second(value2) {};
 
-    double getSum() const {
-        return static_cast<double>(first) + static_cast<double>(second);
+    auto getSum() const {
+        return first + second;
+        // return static_cast<double>(first) + static_cast<double>(second);
     }
 
     auto operator>(const Pair &other) const {
         return getSum() > other.getSum();
     }
 
-    auto operator+(const Pair &other) const {
-        return getSum() + other.getSum();
+    Pair operator+(const Pair &other) const {
+        auto newFirst = first + other.first;
+        auto newSecond = second + other.second;
+        return new Pair(newFirst, newSecond);
     }
 private:
 
