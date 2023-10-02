@@ -843,7 +843,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Task7"
+			"value" : "Task9"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1151,6 +1151,42 @@
 		},
 		{
 			"name" : "Task7_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 9"
+		},
+		{
+			"name" : "Task9_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 9/cmake-build-debug"
+		},
+		{
+			"name" : "Task9_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Task9_SOURCE_DIR",
 			"properties" : 
 			[
 				{
