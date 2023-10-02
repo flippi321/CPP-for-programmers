@@ -16,6 +16,7 @@ bool isApproximatelyEqual(int a, int b) {
     return abs(a - b) <= 2;
 }
 
+// Function used in 9b to print results of isApproximatelyEqual
 void printEquality(bool isEqual, int number){
     if (isEqual) {
         cout << "Intervallet [v1.begin(), v1.begin() + " << number <<"> og v2 er omtrent like." << endl;
@@ -46,4 +47,14 @@ int main() {
     bool isApproximatelyEqualInterval2 = equal(v1.begin(), v1.begin() + 4, v2.begin(), isApproximatelyEqual);
     printEquality(isApproximatelyEqualInterval1, 5);
     printEquality(isApproximatelyEqualInterval2, 4);
+
+    // C:
+    vector<int> v1_copy(v1.size());
+    replace_copy_if(v1.begin(), v1.end(), v1_copy.begin(), [](int element) {
+        return element % 2 != 0;
+    }, 100);
+
+    cout << "v1 etter erstatning: " << v1_copy << endl;
+
+    return 0;
 }
