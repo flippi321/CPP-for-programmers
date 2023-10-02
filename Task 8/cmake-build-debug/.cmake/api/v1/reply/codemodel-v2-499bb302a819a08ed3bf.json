@@ -15,8 +15,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -31,8 +30,7 @@
 					"name" : "Task7",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -40,16 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Task7.1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Task7.1-Debug-dd270d0e903156af3b60.json",
-					"name" : "Task7.1",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "Task7.2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Task7.2-Debug-08199c00e435f38e3a83.json",
-					"name" : "Task7.2",
+					"id" : "Task8.1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task8.1-Debug-e723b468340ce3c6ff19.json",
+					"name" : "Task8.1",
 					"projectIndex" : 0
 				}
 			]
@@ -58,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 7/cmake-build-debug",
-		"source" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 7"
+		"build" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 8/cmake-build-debug",
+		"source" : "/home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 8"
 	},
 	"version" : 
 	{
