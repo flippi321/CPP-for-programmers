@@ -24,7 +24,7 @@ bool equal(double a, double b) {
 // Template method using any of the two templates and prints out the response
 template <typename Type> void printEqual(Type a, Type b) {
     if (equal(a, b)){
-        cout << a << " equals " << setprecision(10) << b << endl;
+        cout << a << " equals " << setprecision(7) << b << endl;
     } else {
         cout << a << " does not equal " << b << endl;
     }
