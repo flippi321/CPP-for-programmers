@@ -21,4 +21,6 @@ int main() {
   print("b = ", b);
   print("c = ", c);
   print("d = ", d);
+
+  return 0;
 }
