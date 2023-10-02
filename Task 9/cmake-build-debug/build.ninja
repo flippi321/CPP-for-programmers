@@ -41,66 +41,35 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/CPP-for-programmers/Task$ 9/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Task8.1
+# Object build statements for EXECUTABLE target Task9.1
 
 
 #############################################
-# Order-only phony target for Task8.1
+# Order-only phony target for Task9.1
 
-build cmake_object_order_depends_target_Task8.1: phony || CMakeFiles/Task8.1.dir
+build cmake_object_order_depends_target_Task9.1: phony || CMakeFiles/Task9.1.dir
 
-build CMakeFiles/Task8.1.dir/src/9.1.cpp.o: CXX_COMPILER__Task8.2e1_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/CPP-for-programmers/Task$ 9/src/9.1.cpp || cmake_object_order_depends_target_Task8.1
-  DEP_FILE = CMakeFiles/Task8.1.dir/src/9.1.cpp.o.d
+build CMakeFiles/Task9.1.dir/src/9.1.cpp.o: CXX_COMPILER__Task9.2e1_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/CPP-for-programmers/Task$ 9/src/9.1.cpp || cmake_object_order_depends_target_Task9.1
+  DEP_FILE = CMakeFiles/Task9.1.dir/src/9.1.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Task8.1.dir
-  OBJECT_FILE_DIR = CMakeFiles/Task8.1.dir/src
+  OBJECT_DIR = CMakeFiles/Task9.1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Task9.1.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Task8.1
+# Link build statements for EXECUTABLE target Task9.1
 
 
 #############################################
-# Link the executable Task8.1
+# Link the executable Task9.1
 
-build Task8.1: CXX_EXECUTABLE_LINKER__Task8.2e1_Debug CMakeFiles/Task8.1.dir/src/9.1.cpp.o
+build Task9.1: CXX_EXECUTABLE_LINKER__Task9.2e1_Debug CMakeFiles/Task9.1.dir/src/9.1.cpp.o
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/Task8.1.dir
+  OBJECT_DIR = CMakeFiles/Task9.1.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Task8.1
-  TARGET_PDB = Task8.1.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target Task8.2
-
-
-#############################################
-# Order-only phony target for Task8.2
-
-build cmake_object_order_depends_target_Task8.2: phony || CMakeFiles/Task8.2.dir
-
-build CMakeFiles/Task8.2.dir/src/8.2.cpp.o: CXX_COMPILER__Task8.2e2_unscanned_Debug /home/password_is_12345678/Desktop/NTNU$ Oppgaver/5.$ Semester/C++/CPP-for-programmers/Task$ 9/src/8.2.cpp || cmake_object_order_depends_target_Task8.2
-  DEP_FILE = CMakeFiles/Task8.2.dir/src/8.2.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Task8.2.dir
-  OBJECT_FILE_DIR = CMakeFiles/Task8.2.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Task8.2
-
-
-#############################################
-# Link the executable Task8.2
-
-build Task8.2: CXX_EXECUTABLE_LINKER__Task8.2e2_Debug CMakeFiles/Task8.2.dir/src/8.2.cpp.o
-  FLAGS = -g
-  OBJECT_DIR = CMakeFiles/Task8.2.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = Task8.2
-  TARGET_PDB = Task8.2.dbg
+  TARGET_FILE = Task9.1
+  TARGET_PDB = Task9.1.dbg
 
 
 #############################################
@@ -136,7 +105,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/password_is_12345678/Desktop/NTNU Oppgaver/5. Semester/C++/CPP-for-programmers/Task 9/cmake-build-debug
 
-build all: phony Task8.1 Task8.2
+build all: phony Task9.1
 
 # =============================================================================
 # Built-in targets
