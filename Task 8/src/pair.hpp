@@ -22,8 +22,6 @@ public:
     Pair operator+(const Pair &other) const {
         auto newFirst = first + other.first;
         auto newSecond = second + other.second;
-        return new Pair(newFirst, newSecond);
+        return Pair(newFirst, newSecond);
     }
-private:
-
 };
