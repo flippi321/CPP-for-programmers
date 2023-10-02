@@ -7,20 +7,18 @@
 
 using namespace std;
 
-void print(const string &text, const Fraction &broek) {
-  cout << text << broek.numerator << " / " << broek.denominator << endl;
+template <typename Type> bool equal(Type a, Type b) {
+  if (a == b){
+    return true;
+  } else {
+    return a.equals(b)
+  }
 }
 
 int main() {
-  Fraction a(10, 20);
-  Fraction b(3, 4);
-  Fraction c = a - 5;
-  Fraction d = 5 - b;
+  double a = 1.0;
+  double b = 2.0;
 
-  print("a = ", a);
-  print("b = ", b);
-  print("c = ", c);
-  print("d = ", d);
-
+  cout << equal(a, b) << endl;
   return 0;
 }
